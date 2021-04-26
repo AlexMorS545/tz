@@ -24,5 +24,13 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexMorS545/tz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlexMorS545/tz/issues"
+  },
+  "homepage": "https://github.com/AlexMorS545/tz#readme"
 }

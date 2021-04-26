@@ -1,4 +1,10 @@
 @import "fonts.sass"
+@import 'burger-menu.sass'
+@import 'header.sass'
+@import 'navbar.sass'
+@import 'top-menu.sass'
+@import 'dropdown.sass'
+
 
 body
   font-family: SFProDisplay, sans-serif
@@ -6,10 +12,14 @@ body
   font-weight: 400
   line-height: 24px
   color: #000
+  @media(max-width: 1200px) 
+    font-size: 14px
 
 .container
   max-width: 1110px
   margin: 0 auto
+  @media(max-width: 1180px) 
+    padding: 0 30px
 
 .hidden
   display: none
@@ -20,170 +30,77 @@ body
   margin: 2.5px 0 0 5px
   transition: all .2s ease-in-out
 
-.header
-  background-color: #fdfafa
-  padding: 15px 0  
+.fa-heart
+  color: #000
+  font-size: 24px
 
-.header-wrp
-  display: flex
-  align-items: center
-  &__img
-    width: 150px
-  &__phone
-    margin-left: 50px
-    color: #8a1541
-    font-size: 14px
-    font-weight: 500
-    letter-spacing: .1px
-    display: flex
-    align-items: center
-    .fa-phone
-      font-size: 17px
-      transform: rotate(88deg)
-      cursor: pointer
-  &__phone-link
-    margin-left: 8px
-    cursor: pointer
-    text-decoration: none
-    color: #8a1541;
-    &:hover
-      color: #a1a1a1
-  &__tel-wrp
-    margin-left: 50px
-  &__tel
-    display: block
-    font-weight: 700
-    font-size: 24px
-    line-height: 20px
-    color: #000
-    opacity: .8
-    text-decoration: none
-  &__user-wrp
-    margin-left: auto
-    display: flex
-    align-items: centre
-    cursor: pointer
-      
-  &__user-link
-    color: #8a1541
-    font-size: 13px
-    font-weight: 500
-    letter-spacing: .1px
-    text-decoration: none
-    &:hover
-      color: #d58d85
-  &__user-img
-    fill: #8a1541
-    width: 20px
-    height: 20px
-    margin-left: 10px
-
-.navbar
-  padding: 0
-  margin-left: 30px
-  
-  &__menu
-    display: flex
-    flex-direction: row
-    margin: 0
-    padding: 0
-
-  &__menu-list
-    margin-left: 20px
-    list-style: none
-    cursor: pointer
-    position: relative
-    &:first-child
-      margin: 0
-    &:hover .menu-dropdown-wrp
-      display: block
-      position: absolute
-
-  &__menu-link
-    font-size: 14px
-    line-height: 20px
-    color: #a1a1a1
-    transition: all .2s ease-in-out
-    text-decoration: none
-    display: flex
-    align-items: center
-    &:hover
-      color: #d58d85
-    &:hover .fa-chevron-down
-      transform: rotate(180deg)
-      color: #d58d85
-
-.menu-dropdown-wrp
-  padding: 10px
-  position: absolute
-  display: none  
-  top: 100%
-  left: -25px
-  z-index: 10
-
-.menu-dropdown-small
-  min-width: 0
-
-.menu-dropdown
-  margin: 0
-  padding: 20px 24px
-  min-width: 256px
-  list-style: none
-  background: #fff
-  opacity: 1
-  border-radius: 8px
-  transition: all .2s ease-in-out
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
-  &__list
-    margin-bottom: 10px
-
-  &__link
-    color: #000
-    font-size: 14px
-    font-weight: 400
-    line-height: 16px
-    letter-spacing: .1px
-    text-decoration: none
-    &:hover
-      color: #d58d85
+.top-section
+  padding: 15px 0
 
 .top-section__wrp
   padding: 15px 0
+  display: flex
 
-.top-menu
+.top-search
   
-  &__menu
-    display: flex
-    flex-direction: row
-    margin: 0
-    padding: 0
-  &__menu-list
-    list-style: none
-    margin-left: 25px
-    position: relative
+  &__wrp
     display: flex
     align-items: center
-    &:first-child
-      margin: 0
-    &:hover .menu-dropdown-wrp
-      display: block
-      position: absolute
-  &__menu-list-img
-    width: 30px
-    margin-right: 8px
-    // color: #8a1541
-    cursor: pointer
-  &__menu-link
-    display: flex
-    align-items: center
+    margin-left: auto
+  &__like
+    display: block
     text-decoration: none
-    font-size: 16px
-    font-weight: 500
-    line-height: 24px
-    letter-spacing: .1px
-    color: #000
-    &:hover
-      color: #8a1541
-    &:hover .fa-chevron-down
-      transform: rotate(180deg)
-      color: #8a1541
+    margin-left: 25px
+    height: 24px
+    @media(max-width: 1200px) 
+      margin-left: 15px
+  &__form
+    width: 24px
+    height: 24px
+    background-color: transparent
+    position: relative
+    border: 1px solid transparent
+  &__form-input
+    width: 0
+    min-height: 0
+    outline: none
+    border: none
+    box-sizing: border-box
+    background-color: transparent
+    position: absolute
+    top: 40px
+    right: 2px
+    font-size: 20px
+    &:focus
+      width: 400px
+      min-height: auto
+      transition: width .5s ease
+      background-color: #fdfafa
+      padding: 15px
+      border: 1px solid #851642
+      box-shadow: 0px 0px 30px 10px rgba(133, 22, 66, .2)
+  &__form-lable
+    display: block
+    width: 100%
+    height: 100%
+    cursor: pointer
+  &__form-img
+    width: 100%
+    height: 100%
+.basket
+  height: 24px
+  margin-left: 25px
+  @media(max-width: 1200px) 
+    margin-left: 15px
+  &__btn
+    background-color: transparent
+    text-decoration: none
+    display: flex
+    align-items: center
+  &__img
+    width: 20px
+    height: 24px
+    fill: #000
+  &__price
+    color: #851642
+    margin-left: 5px

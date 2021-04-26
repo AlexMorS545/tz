@@ -1,0 +1,67 @@
+
+.header
+  background-color: #fdfafa
+  padding: 15px 0  
+
+.header-wrp
+  display: flex
+  align-items: center
+  &__img
+    width: 150px
+    @media(max-width: 1200px) 
+      width: 130px
+    
+  &__phone
+    margin-left: 50px
+    color: #8a1541
+    font-size: 14px
+    font-weight: 500
+    letter-spacing: .1px
+    display: flex
+    align-items: center
+    @media(max-width: 1200px) 
+      margin-left: 30px
+    .fa-phone
+      font-size: 17px
+      transform: rotate(88deg)
+      cursor: pointer
+  &__phone-link
+    margin-left: 8px
+    cursor: pointer
+    text-decoration: none
+    color: #8a1541;
+    &:hover
+      color: #a1a1a1
+  &__tel-wrp
+    margin-left: 50px
+    @media(max-width: 1200px) 
+      margin-left: 30px
+  &__tel
+    display: block
+    font-weight: 700
+    font-size: 24px
+    line-height: 20px
+    color: #000
+    opacity: .8
+    text-decoration: none
+    @media(max-width: 1200px) 
+      font-size: 18px
+  &__user-wrp
+    margin-left: auto
+    display: flex
+    align-items: centre
+    cursor: pointer
+      
+  &__user-link
+    color: #8a1541
+    font-size: 13px
+    font-weight: 500
+    letter-spacing: .1px
+    text-decoration: none
+    &:hover
+      color: #d58d85
+  &__user-img
+    fill: #8a1541
+    width: 20px
+    height: 20px
+    margin-left: 10px
