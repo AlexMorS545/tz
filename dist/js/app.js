@@ -27,4 +27,6 @@ $('.fa-times').click(function() {
     $('.banner').slideUp(300)
 })
 
-$('.header-wrp__phone-link').magnificPopup(console.log('hi'))
+$(document).ready(function() {
+    $('.image-link').magnificPopup({type:'image'});
+  });
