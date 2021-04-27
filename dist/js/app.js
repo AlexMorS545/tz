@@ -11,11 +11,8 @@ $(window).resize(function() {
 $('.burger-menu').on('click', function() {
     $(this).toggleClass('active')
     if($('.burger-menu .active')) {
-        $('.top-menu__wrp').toggleClass('show') //css('transform', 'translate(0, 0)')
+        $('.top-menu__wrp').toggleClass('show')
     }
-    //  else {
-    //     $('.top-menu__wrp').css('transform', 'translate(-1000px, 0)')
-    // }
 })
 
 $('.top-menu__menu-list ul').hide();
@@ -25,3 +22,9 @@ $('.top-menu__menu-list').click(function() {
         $(this).find($('.top-menu__menu-list ul')).slideToggle(200)
     }
 });
+
+$('.fa-times').click(function() {
+    $('.banner').slideUp(300)
+})
+
+$('.header-wrp__phone-link').magnificPopup(console.log('hi'))
