@@ -27,6 +27,6 @@ $('.fa-times').click(function() {
     $('.banner').slideUp(300)
 })
 
-$(document).ready(function() {
-    $('.image-link').magnificPopup({type:'image'});
-  });
+// $(document).ready(function() {
+//     $('.image-link').magnificPopup({type:'image'});
+// });
