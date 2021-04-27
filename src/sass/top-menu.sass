@@ -1,18 +1,42 @@
 .top-menu
-  
+
+  &__wrp
+    transition: .3s ease-in-out
+    @media (max-width: 980px)
+      position: absolute
+      top: -13vh
+      width: 80%
+      transform: translate(-1000px, 0)
+      &.show
+        transform: translate(0, 0)
+    @media (max-width: 768px)
+      position: absolute
+      top: -49px
+      width: 80%
+      transform: translate(-1000px, 0)
+      &.show
+        transform: translate(0, 0)
+
+  &__navbar
+    @media (max-width: 980px)
+      border: 1px solid #f2e5e9
+      background-color: #fff
   &__menu
     display: flex
     flex-direction: row
     margin: 0
     padding: 0
+    @media (max-width: 980px)
+      flex-direction: column
+      align-items: flex-start
+      padding: 0 15px
   &__menu-list
     list-style: none
     margin-left: 25px
     position: relative
     display: flex
     align-items: center
-    @media(max-width: 1200px) 
-      margin-left: 15px
+    transition: all 0.2s linear
     &:first-child
       margin: 0
     &:hover .menu-dropdown-wrp
@@ -25,10 +49,27 @@
     &:hover .fa-chevron-down
       transform: rotate(180deg)
       color: #8a1541
+    @media(max-width: 1200px) 
+      margin-left: 15px
+    @media (max-width: 980px)
+      padding: 15px 0
+      margin: 0
+      flex-direction: column
+      align-items: flex-start
+      border-bottom: 1px solid #f2e5e9
+      width: 100%
+      &:hover .fa-chevron-down
+        transform: rotate(0deg)
+      &:hover .menu-dropdown-wrp
+        display: block
+        position: static
+
   &__menu-list-img
     width: 30px
     margin-right: 8px
     cursor: pointer
+    @media (max-width: 980px)
+      display: none
   &__menu-link
     display: flex
     align-items: center
@@ -38,3 +79,8 @@
     line-height: 24px
     letter-spacing: .1px
     color: #000
+    transition: all 0.2s linear
+    @media (max-width: 980px)
+      width: 100%
+      justify-content: space-between
+      padding-right: 15px

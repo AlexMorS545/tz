@@ -1,15 +1,27 @@
 $(window).resize(function() {
-    if($(window).width() < 980) {
-        $('div.header-wrp__user-wrp').replaceWith($('.top-search__wrp'))
-        // var el = $('.top-search__wrp').html()
-        // var elem = $('.header__wrp').html()
-        // console.log('<980px');
-        // console.log(el);
+    if($(this).width() < 980) {
+        $('.header-wrp__user-wrp .top-search__wrp').remove();
+        var $el = $('.top-search__wrp');
+        $('.header-wrp__user-wrp').append($el.clone());
     } else {
-        console.log('>980px');
+        $('.header-wrp__user-wrp .top-search__wrp').remove();
     }
-})
+});
 
 $('.burger-menu').on('click', function() {
     $(this).toggleClass('active')
+    if($('.burger-menu .active')) {
+        $('.top-menu__wrp').toggleClass('show') //css('transform', 'translate(0, 0)')
+    }
+    //  else {
+    //     $('.top-menu__wrp').css('transform', 'translate(-1000px, 0)')
+    // }
 })
+
+$('.top-menu__menu-list ul').hide();
+$('.top-menu__menu-list').click(function() {
+    $(this).toggleClass('action')
+    if($('.top-menu__menu-list action')) {
+        $(this).find($('.top-menu__menu-list ul')).slideToggle(200)
+    }
+});

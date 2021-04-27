@@ -28,7 +28,12 @@ body
   color: #a1a1a1
   font-size: 8px
   margin: 2.5px 0 0 5px
-  transition: all .2s ease-in-out
+  transition: all .2s linear
+  @media(max-width: 980px)
+    color: #000
+    font-size: 12px
+    margin: 5px 0 0 0
+    transform: rotate(-90deg)
 
 .fa-heart
   color: #000
@@ -36,10 +41,13 @@ body
 
 .top-section
   padding: 15px 0
-
-.top-section__wrp
-  padding: 15px 0
-  display: flex
+  position: relative
+  &__wrp
+    padding: 15px 0
+    display: flex
+    @media(max-width: 980px) 
+      & .top-search__wrp
+        display: none
 
 .top-search
   
