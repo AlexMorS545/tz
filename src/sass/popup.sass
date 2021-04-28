@@ -1,3 +1,13 @@
+.white-popup
+  position: relative
+  background: #FFF
+  padding: 20px
+  width: auto
+  max-width: 400px
+  margin: 20px auto
+  text-align: center
+
+	
 .popup
 
 	&__form
@@ -13,3 +23,26 @@
 	&__form-name
 		width: 100%;
 	&__form-btn
+
+.mfp-zoom-in .mfp-with-anim
+	opacity: 0
+	transition: all 0.2s ease-in-out
+	transform: scale(0.8)
+
+.mfp-zoom-in.mfp-bg
+  opacity: 0
+  transition: all 0.3s ease-out
+ 
+.mfp-zoom-in.mfp-ready .mfp-with-anim
+	opacity: 1
+	transform: scale(1)
+ 
+.mfp-zoom-in.mfp-ready.mfp-bg
+  opacity: 0.8
+ 
+.mfp-zoom-in.mfp-removing .mfp-with-anim
+	transform: scale(0.8)
+  opacity: 0
+ 
+.mfp-zoom-in.mfp-removing.mfp-bg
+  opacity: 0

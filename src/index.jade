@@ -11,10 +11,19 @@ html(lang="en")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
     link(rel="stylesheet", href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css", integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p", crossorigin="anonymous")
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", defer)
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.10.3/jquery.mask.min.js", defer)
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js", defer)
     script(src="js/magnific-popup.min.js", defer)
     script(src="./js/app.js", defer)
   body
+    #test-popup.white-popup.mfp-with-anim.mfp-hide
+      form.popup__form(action="#")
+        .popup__form-name
+          input#name(type="text", placeholder="Ваше имя", required)
+        .popup__form-tel
+          input#phone(type="text", placeholder="+9(999)9999999", required)
+        span.popup__form-text Удобное время для звонка
+        .popup__form-btn
+          input(type="submit", value="Отправить")
     .banner
       .banner__wrp.container
         .banner-title__wrp
@@ -88,7 +97,7 @@ html(lang="en")
                     a.menu-dropdown__link(href="#") Контакты
         .header-wrp__phone
           i.fas.fa-phone
-          a.header-wrp__phone-link(href="#") Нужна консультация?
+          a.header-wrp__phone-link(href="#", data-effect="mfp-zoom-in") Нужна консультация?
           .header-wrp__tel-wrp
             a.header-wrp__tel(href="tel:88003333300") 8&nbsp;800&nbsp;333&nbsp;33&nbsp;00
         .header-wrp__user-wrp
