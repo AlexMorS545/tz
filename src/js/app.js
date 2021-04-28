@@ -3,14 +3,6 @@ $(window).resize(function() {
         $('.header-wrp__user-wrp .top-search__wrp').remove();
         var $el = $('.top-search__wrp');
         $('.header-wrp__user-wrp').append($el.clone());
-        var list = $('.top-menu__menu-list')
-        $('.top-menu__menu-list ul').hide();
-        $(list).click( function() {
-            $(list).toggleClass('action')
-            if($('.top-menu__menu-list action')) {
-                $(this).find($('.top-menu__menu-list ul')).slideToggle(200)
-            }
-        });
     } else {
         $('.header-wrp__user-wrp .top-search__wrp').remove();
     }
@@ -23,28 +15,22 @@ $('.burger-menu').on('click', function() {
     }
 })
 
-// function openMenu() {
-//     $('.top-menu__menu-list ul').hide();
-//     $('.top-menu__menu-list').on('click', function() {
-//         $(this).toggleClass('action')
-//         if($('.top-menu__menu-list action')) {
-//             $(this).find($('.top-menu__menu-list ul')).slideToggle(200)
-//         }
-//     });
-// }
-// console.log($('.top-menu__menu-list ul'));
-// $('.top-menu__menu-list ul').hide();
-// $('.top-menu__menu-list').on('click', function() {
-//     $(this).toggleClass('action')
-//     if($('.top-menu__menu-list action')) {
-//         $(this).find($('.top-menu__menu-list ul')).slideToggle(200)
-//     }
-// });
-
 $('.fa-times').on('click', function() {
     $('.banner').slideUp(300)
 })
 
-// $(document).ready(function() {
-//     $('.image-link').magnificPopup({type:'inline'});
-// });
+$('.header-wrp__phone-link').magnificPopup({
+    items: {
+        src: `<div id="popup" class="white-popup">
+                    <form class="popup__form" action="#">
+                        <div class="popup__form-name" ><input id="name" type="text" placeholder="Ваше имя" required/></div>
+                        <div class="popup__form-tel"><input id="phone" type="text" placeholder="+9(999)99999999" required/></div>
+                        <span>Удобное время для звонка</span>
+                        <div><input type="popup__form-btn" value="Отправить"></div>
+                    </form>
+                </div>`,
+        type: 'inline'
+    }
+});
+
+$('#phone').mask('+9(999)99999999')

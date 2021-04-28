@@ -1,11 +1,12 @@
 /* Magnific Popup CSS */
 .white-popup {
     position: relative;
-    background: rgb(141, 252, 233);
+    background: rgb(255, 255, 255);
     padding: 20px;
     width: auto;
     max-width: 500px;
     margin: 20px auto;
+    visibility: visible;
 }
 .mfp-bg {
     top: 0;
