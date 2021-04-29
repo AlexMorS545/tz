@@ -12,7 +12,7 @@ let path = {
     },
     src: {
         html: [source_folder + '/*.jade', '!' + source_folder + '/_*.jade'],
-        css: source_folder + '/sass/*.sass',
+        css: source_folder + '/sass/*.{sass,css}',
         js: source_folder + '/js/*.js',
         image: source_folder + '/image/**/*.{jpg,jpeg,png,svg,gif,ico,webp}',
         fonts: source_folder + '/fonts/*.ttf',

@@ -5,7 +5,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Consul
-    link(rel="stylesheet", href="css/magnific-popup.css")
+    link(rel="stylesheet", href="css/magnific-popup.min.css")
     link(rel="stylesheet", href="css/style.min.css")
     link(rel="icon", href="./image/favicon.png", type="image/png")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
@@ -15,15 +15,6 @@ html(lang="en")
     script(src="js/magnific-popup.min.js", defer)
     script(src="./js/app.js", defer)
   body
-    #test-popup.white-popup.mfp-with-anim.mfp-hide
-      form.popup__form(action="#")
-        .popup__form-name
-          input#name(type="text", placeholder="Ваше имя", required)
-        .popup__form-tel
-          input#phone(type="text", placeholder="+9(999)9999999", required)
-        span.popup__form-text Удобное время для звонка
-        .popup__form-btn
-          input(type="submit", value="Отправить")
     .banner
       .banner__wrp.container
         .banner-title__wrp
